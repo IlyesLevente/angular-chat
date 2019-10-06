@@ -1,0 +1,38 @@
+
+<div class="chat-wrapper">
+  <div class="conversation-header">
+    <h2>
+      <mat-icon>forum</mat-icon>
+      Chat
+    </h2>
+    <h2>
+      <mat-icon>account_circle</mat-icon>
+      {{members}}
+      members
+    </h2>
+  </div>
+
+  <mat-divider></mat-divider>
+
+  <div #messageContent class="message-content">
+    <div class="chip-message" id="contentInside" *ngFor="let container of containers">
+      <mat-chip-list *ngIf="container.who != 'connection'" [ngClass]="{'left': container.who == 'me', 'right': container.who =='partner' }" aria-label="Fish selection">
+          <div *ngIf="container.who == 'partner'" class="partner" >{{container.name}}</div>
+          <mat-chip [ngClass]="{'left-color': container.name =='', 'right-color': container.name !='' }" selected>{{container.message}}</mat-chip>
+      </mat-chip-list>
+      <div *ngIf="container.who == 'connection'" class="center">
+          {{container.name}} {{container.message}}
+      </div>
+    </div>
+    <div class="clear"></div>
+    <div class="writing">{{who}}</div>
+  </div>
+
+  <footer class="conversation-input">
+    <mat-divider></mat-divider>
+    <mat-form-field (keydown)="keyDownFunction($event)" class="input-form-field">
+        <input matInput class="full-width" [(ngModel)]="message" name="message" (input)="onInputChange($event.target.value)" placeholder="Message...">
+        <mat-icon matSuffix (click)="sendMessage()" >send</mat-icon>
+    </mat-form-field>
+  </footer>
+</div>

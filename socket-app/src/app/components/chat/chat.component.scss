@@ -1,0 +1,84 @@
+.full-width {
+    width: 100%;
+}
+
+.conversation-input {
+    width: 100%;
+    text-align: center;
+    background-color: #fafafa;
+    position: fixed;
+    bottom: 0;
+}
+
+.right {
+    float: right;
+    clear: right;
+    margin-right: 5px;
+    margin-top: 5px;
+}
+
+.left {
+    float: left;
+    clear: left;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+.center {
+    width: 50%;
+    margin: 0 auto;
+    clear: both;
+    text-align: center;
+    color: gray;
+    margin-bottom: 10px;
+}
+
+.clear {
+    clear: both;
+}
+
+.message-content {
+    margin-top: 5px;
+    overflow: scroll;
+    max-height: 80vh;
+}
+
+.conversation-header h2 {
+    align-items: center;
+    display: flex;
+}
+
+.input-form-field {
+    width: 90%;
+}
+
+.chat-wrapper {
+    display: inline-block;
+    width: 100%;
+    min-height: 100%;
+}
+
+.chip-message {
+    margin-top: 5px;
+}
+
+.left-color {
+    background-color: lightseagreen !important;
+}
+
+.right-color {
+    background-color: palevioletred !important;
+}
+
+.writing {
+    float: right;
+    color: gray;
+}
+
+.partner {
+    color: gray;
+}
+
+::-webkit-scrollbar { 
+    display: none; /* Chrome Safari */
+}
